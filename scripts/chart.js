@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!-- End Wayback Rewrite JS Include -->
-<meta charset="utf-8">
 
-<body>
-<script>
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
@@ -102,5 +97,3 @@ d3.tsv("data.tsv", function(error, data) {
     focus.select("text").text(formatCurrency(d.close));
   }
 });
-
-</script>
