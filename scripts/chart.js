@@ -1,4 +1,4 @@
-
+function drawLineChart(cssSelector){
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
@@ -29,7 +29,7 @@ var line = d3.svg.line()
 
 //below this is the section that we changed earlier to make part 3 work
 
-var svg = d3.select("#apple-stock-chart").append("svg")
+var svg = d3.select(cssSelector).append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
 
@@ -96,4 +96,7 @@ d3.tsv("data.tsv", function(error, data) {
     focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
     focus.select("text").text(formatCurrency(d.close));
   }
-}); 
+}); }
+
+drawLineChart('#apple-stock-chart');
+drawLineChart('#apple-stock-chart-2');
